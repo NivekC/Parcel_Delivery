@@ -1,6 +1,7 @@
+import 'package:delivery_app/widgets/intro_1.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp((LandingPageOne()));
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: LandingPageOne(),
     );
   }
 }
