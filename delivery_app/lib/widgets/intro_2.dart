@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 
 
-class LandingPageOne extends StatelessWidget {
+class LandingPageTwo extends StatelessWidget {
   final String title = 'DeliveryApp';
 
   Widget build(BuildContext context) {

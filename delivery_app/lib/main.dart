@@ -2,6 +2,8 @@ import 'package:delivery_app/widgets/intro_1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'widgets/PaymentsOptions.dart';
+
 void main() {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: LandingPageOne(),
+      home: PaymentOptions(),
     );
   }
 }
