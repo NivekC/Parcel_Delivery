@@ -39,7 +39,7 @@ class LandingPageOne extends StatelessWidget {
               height:252,
               margin: EdgeInsets.only(left: 20, top: 29, right: 20),
               child: Image.asset(
-                 "assets/images/Request_pickup.jpg",
+                 "assets/images/Receive_package.jpg",
                  fit: BoxFit.cover,
                ),
             ),
