@@ -44,16 +44,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-assets:
-    - assets/images/Receive_package.jpg
-    - assets/images/Request_pickup.jpg
-    - assets/images/Tracking_delivery.jpg
-    - assets\values\drawable-ldpi\1.png
-    - assets\values\drawable-ldpi\2.png
-    - assets\values\drawable-ldpi\Path 157.png
-  
-    
-
+  assets:
+   - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
