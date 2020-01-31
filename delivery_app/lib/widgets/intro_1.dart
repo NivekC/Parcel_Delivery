@@ -23,6 +23,9 @@ class LandingPageOne extends StatelessWidget {
           )
         ],
       ),
+      
+    
+
       body: Container(
         width: double.infinity,
         color: Colors.white,
@@ -67,7 +70,7 @@ class LandingPageOne extends StatelessWidget {
               ),
             ),
           ),
-          Spacer(),
+        
           Align(
             alignment: Alignment.topLeft,
             child: Container(

@@ -1,6 +1,8 @@
+import 'package:delivery_app/widgets/PaymentsOptions.dart';
 import 'package:delivery_app/widgets/intro_1.dart';
 import 'package:delivery_app/widgets/intro_2.dart';
 import 'package:delivery_app/widgets/intro_3.dart';
+import 'package:delivery_app/widgets/settings.dart';
 import 'package:flutter/material.dart';
 import 'widgets/sign_in.dart';
 
@@ -34,6 +36,9 @@ class MyApp extends StatelessWidget {
         '/intro-one': (ctx) => LandingPageOne(),
         '/intro-two': (ctx) => LandingPageTwo(),
         '/intro-three': (ctx) => LandingPageThree(),
+        '/Payment': (ctx) => PaymentOptions(),
+        '/settings': (ctx) => Settings(),
+
       },
     );
   }
