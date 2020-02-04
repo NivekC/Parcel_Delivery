@@ -1,8 +1,12 @@
+
 import 'package:delivery_app/widgets/PaymentsOptions.dart';
+import 'package:delivery_app/widgets/code.dart';
 import 'package:delivery_app/widgets/intro_1.dart';
 import 'package:delivery_app/widgets/intro_2.dart';
 import 'package:delivery_app/widgets/intro_3.dart';
+import 'package:delivery_app/widgets/phone_verification.dart';
 import 'package:delivery_app/widgets/settings.dart';
+import 'package:delivery_app/widgets/sign-up.dart';
 import 'package:flutter/material.dart';
 import 'widgets/sign_in.dart';
 
@@ -38,7 +42,9 @@ class MyApp extends StatelessWidget {
         '/intro-three': (ctx) => LandingPageThree(),
         '/Payment': (ctx) => PaymentOptions(),
         '/settings': (ctx) => Settings(),
-
+        '/Sign-up': (ctx) => SignUp(),
+        '/code': (ctx) => Code(),
+        '/phone': (ctx) => Phone(),
       },
     );
   }

@@ -7,23 +7,17 @@ class LandingPageTwo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/intro-one');
+          },
+          icon: Icon(
+            Icons.arrow_back,
+          ),
+          color: Colors.black,
+        ),
         backgroundColor: Colors.white,
         actions: <Widget>[
-          FlatButton(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
-            color: Colors.white,
-            child: Text(
-              'Previous',
-              style: TextStyle(color: Colors.black),
-            ),
-            onPressed: () {
-              Navigator.of(context).pushNamed('/intro-one');
-            },
-          ),
-          SizedBox(
-            width: 180,
-          ),
           FlatButton(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
@@ -43,42 +37,44 @@ class LandingPageTwo extends StatelessWidget {
         color: Colors.white,
         child:
             Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          SizedBox(
+            height: 60,
+          ),
           Container(
-            height: 252,
+            height: MediaQuery.of(context).size.height / 2.5,
             margin: EdgeInsets.only(left: 20, top: 29, right: 20),
             child: Image.asset(
               'assets/images/Tracking_delivery.jpg',
               fit: BoxFit.cover,
             ),
           ),
+          SizedBox(
+            height: 30,
+          ),
           Align(
-            alignment: Alignment.topLeft,
-            child: Container(
-              margin: EdgeInsets.only(left: 75, top: 43),
-              child: Text(
-                "TRACK DELIVERY",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 24,
-                ),
+            alignment: Alignment.center,
+            child: Text(
+              "TRACK DELIVERY",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+                fontSize: 24,
               ),
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
           Align(
             alignment: Alignment.topRight,
-            child: Container(
-              width: 315,
-              margin: EdgeInsets.only(top: 21, right: 20),
-              child: Text(
-                "Track your package in real time! Ensure that your package is heading in the right direction and arrives safe",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14,
-                ),
+            child: Text(
+              "Track your package in real time! Ensure that your package is heading in the right direction and arrives safe",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
               ),
             ),
           ),
@@ -94,12 +90,10 @@ class LandingPageTwo extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 20,
-          ),
+          Spacer(),
           Container(
-            padding: EdgeInsets.all(18),
-            height: 80,
+             padding: EdgeInsets.all(10),
+              height:MediaQuery.of(context).size.height / 10,
             child: RaisedButton(
               shape: RoundedRectangleBorder(
                 borderRadius: new BorderRadius.circular(20),

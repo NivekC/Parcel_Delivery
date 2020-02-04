@@ -1,20 +1,18 @@
 import 'package:delivery_app/Animation/FadeAnimation.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatelessWidget {
+class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        height: MediaQuery.of(context).size.height / 0.5,
         decoration: BoxDecoration(
-          gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-            Colors.blue[300],
-            Colors.blue[300],
-            Colors.blue[300],
-          ]),
-        ),
+            gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+          Colors.blue[300],
+          Colors.blue[300],
+          Colors.blue[300],
+        ])),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -29,7 +27,7 @@ class SignIn extends StatelessWidget {
                   FadeAnimation(
                       1,
                       Text(
-                        "Login",
+                        "Sign Up",
                         style: TextStyle(color: Colors.white, fontSize: 50),
                       )),
                   SizedBox(
@@ -38,7 +36,7 @@ class SignIn extends StatelessWidget {
                   FadeAnimation(
                       1.3,
                       Text(
-                        "Welcome Back",
+                        "Welcome OnBoard!",
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       )),
                 ],
@@ -83,7 +81,7 @@ class SignIn extends StatelessWidget {
                                               color: Colors.grey[200]))),
                                   child: TextField(
                                     decoration: InputDecoration(
-                                        hintText: "Email or Phone number",
+                                        hintText: "Email",
                                         hintStyle:
                                             TextStyle(color: Colors.black),
                                         border: InputBorder.none),
@@ -92,9 +90,11 @@ class SignIn extends StatelessWidget {
                                 Container(
                                   padding: EdgeInsets.all(10),
                                   decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: Colors.grey[200]))),
+                                    border: Border(
+                                      bottom:
+                                          BorderSide(color: Colors.grey[200]),
+                                    ),
+                                  ),
                                   child: TextField(
                                     decoration: InputDecoration(
                                         hintText: "Password",
@@ -103,66 +103,74 @@ class SignIn extends StatelessWidget {
                                         border: InputBorder.none),
                                   ),
                                 ),
+                                Container(
+                                  padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                    border: Border(
+                                      bottom: BorderSide(
+                                        color: Colors.grey[200],
+                                      ),
+                                    ),
+                                  ),
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        hintText: "Repeat Password",
+                                        hintStyle:
+                                            TextStyle(color: Colors.black),
+                                        border: InputBorder.none),
+                                  ),
+                                )
                               ],
                             ),
                           )),
                       SizedBox(
-                        height: 32,
+                        height: 40,
                       ),
+
                       FadeAnimation(
-                          1.5,
-                          Text(
-                            "Forgot Password?",
-                            style: TextStyle(color: Colors.black),
+                          1.6,
+                          Container(
+                            height: MediaQuery.of(context).size.height / 13,
+                            margin: EdgeInsets.symmetric(horizontal: 50),
+                            child: RaisedButton(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius:
+                                        new BorderRadius.circular(20)),
+                                color: Colors.blue[300],
+                                onPressed: () {
+                                  Navigator.of(context).pushNamed('routeName');
+                                },
+                                child: Center(
+                                  child: Text(
+                                    "Sign Up",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: Colors.blue[300]),
                           )),
                       SizedBox(
-                        height: 20,
-                      ),
-                      FadeAnimation(
-                        1.6,
-                        Container(
-                          height: MediaQuery.of(context).size.height / 18,
-                          margin: EdgeInsets.symmetric(horizontal: 50),
-                          child: RaisedButton(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: new BorderRadius.circular(20)),
-                              color: Colors.blue[300],
-                              onPressed: () {
-                                Navigator.of(context).pushNamed('routeName');
-                              },
-                              child: Center(
-                                child: Text(
-                                  "Login",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              )),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              color: Colors.blue[300]),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
+                        height: 50,
                       ),
 
                       Container(
-                        height: MediaQuery.of(context).size.height / 25,
+                        height: MediaQuery.of(context).size.height / 30,
                         margin: EdgeInsets.symmetric(horizontal: 50),
-                        color: null,
+                        color: Colors.white,
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(20),
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            print('Pressed');
-                            Navigator.of(context).pushNamed('/Sign-up');
+                            Navigator.of(context).pushNamed('/sign-in');
                           },
                           child: Center(
                               child: Text(
-                            "Create Account",
+                            "Login",
                             style: TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.bold),
