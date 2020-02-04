@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: LandingPageOne(),
+      home: PaymentOptions(),
       routes: {
         '/sign-in': (ctx) => SignIn(),
         '/intro-one': (ctx) => LandingPageOne(),

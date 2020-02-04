@@ -101,7 +101,7 @@ class _DrawerUserControllerState extends State<DrawerUserController>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.white,
+      backgroundColor: AppTheme.nearlyWhite,
       body: SingleChildScrollView(
         controller: scrollController,
         scrollDirection: Axis.horizontal,
@@ -163,7 +163,7 @@ class _DrawerUserControllerState extends State<DrawerUserController>
                           ignoring: scrolloffset == 1 || false,
                           child: widget.screenView == null
                               ? Container(
-                                  color: Colors.white,
+                                  color: Colors.transparent,
                                 )
                               : widget.screenView,
                         ),

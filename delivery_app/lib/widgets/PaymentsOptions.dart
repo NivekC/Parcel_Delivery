@@ -1,3 +1,4 @@
+import 'package:delivery_app/custom_drawer/drawer_user_controller.dart';
 import 'package:flutter/material.dart';
 
 class PaymentOptions extends StatelessWidget {
@@ -15,7 +16,7 @@ class PaymentOptions extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
-      drawer: Drawer(),
+      drawer: DrawerUserController(),
       body: Container(
         padding: EdgeInsets.all(10),
         child: Column(

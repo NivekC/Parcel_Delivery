@@ -1,3 +1,4 @@
+import 'package:delivery_app/custom_drawer/home_drawer.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatelessWidget {
@@ -15,7 +16,7 @@ class Settings extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
-      drawer: Drawer(),
+      drawer: HomeDrawer(),
       body: Container(
         padding: EdgeInsets.all(0),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
