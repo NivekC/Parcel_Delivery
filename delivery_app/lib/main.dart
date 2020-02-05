@@ -1,14 +1,16 @@
-
+//import 'package:delivery_app/custom_drawer/drawer_user_controller.dart';
 import 'package:delivery_app/widgets/PaymentsOptions.dart';
 import 'package:delivery_app/widgets/code.dart';
 import 'package:delivery_app/widgets/intro_1.dart';
 import 'package:delivery_app/widgets/intro_2.dart';
 import 'package:delivery_app/widgets/intro_3.dart';
 import 'package:delivery_app/widgets/phone_verification.dart';
+//import 'package:delivery_app/widgets/rating.dart';
 import 'package:delivery_app/widgets/settings.dart';
 import 'package:delivery_app/widgets/sign-up.dart';
 import 'package:flutter/material.dart';
 import 'widgets/sign_in.dart';
+import 'package:delivery_app/widgets/map.dart';
 
 void main() => runApp(MyApp());
 // SystemChrome.setPreferredOrientations([
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: PaymentOptions(),
+      home: Map(),
       routes: {
         '/sign-in': (ctx) => SignIn(),
         '/intro-one': (ctx) => LandingPageOne(),
@@ -45,7 +47,9 @@ class MyApp extends StatelessWidget {
         '/Sign-up': (ctx) => SignUp(),
         '/code': (ctx) => Code(),
         '/phone': (ctx) => Phone(),
-      },
+        '/map': (ctx) => Map(),
+      //  '/rating' : (ctx) =>  Rating(),
+              },
     );
   }
 }

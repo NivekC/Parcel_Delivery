@@ -65,7 +65,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.notWhite.withOpacity(0.5),
+      backgroundColor: AppTheme.notWhite.withOpacity(0.5), //full drawer
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -108,9 +108,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                             child: ClipRRect(
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(10.0)),
-                              child: Icon(
-                                Icons.verified_user
-                              ),
+                              child: Icon(Icons.verified_user),
                             ),
                           ),
                         ),
@@ -190,6 +188,9 @@ class _HomeDrawerState extends State<HomeDrawer> {
         highlightColor: Colors.transparent,
         onTap: () {
           navigationtoScreen(listData.index);
+          print(listData.routes.length);
+
+          //Navigator.of(context).pushNamed('${listData.routes[listData.index.index]}');
         },
         child: Stack(
           children: <Widget>[
@@ -300,12 +301,14 @@ enum DrawerIndex {
 }
 
 class DrawerList {
+  
   DrawerList({
     this.isAssetsImage = false,
     this.labelName = '',
     this.icon,
     this.index,
     this.imageName = '',
+    this.routes,
   });
 
   String labelName;
@@ -313,4 +316,8 @@ class DrawerList {
   bool isAssetsImage;
   String imageName;
   DrawerIndex index;
+  List<String> routes = const[
+    '/Payment',
+    '/settings',
+  ];
 }

@@ -1,16 +1,16 @@
 // import 'package:flutter/material.dart';
 
 // class Rating extends StatefulWidget {
-//   final int initialRating;
-//   final void Function(int) onRated;
-//   final double size;
-//   final Color color;
+//   // final int initialRating;
+//   // final void Function(int) onRated;
+//   // final double size;
+//   // final Color color;
 
-//   Rating(
-//       {this.initialRating,
-//       this.onRated,
-//       this.size = 18.0,
-//       this.color = Colors.amber});
+//   // Rating(
+//   //     {this.initialRating,
+//   //     this.onRated,
+//   //     this.size = 18.0,
+//   //     this.color = Colors.amber});
 
 //   @override
 //   _RatingState createState() => _RatingState();
@@ -29,12 +29,12 @@
 //     if (_rating == 1 && newRating == 1 && _isDragging != true) {
 //       setState(() {
 //         _rating = 0;
-//         widget.onRated(0);
+//        // widget.onRated(0);
 //       });
 //     } else {
 //       setState(() {
 //         _rating = newRating;
-//         widget.onRated(newRating);
+//      //   widget.onRated(newRating);
 //       });
 //     }
 //   }
